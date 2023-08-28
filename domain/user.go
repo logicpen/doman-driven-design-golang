@@ -18,7 +18,7 @@ type UserRepository interface {
 
 // UserUseCase contains meaningful method names which would contain business logic
 type UserUseCase interface {
-	// CreateUser during concrete implementation, creates user as per business logic i.e check duplicate emailId etc
+	// CreateUser during concrete implementation, creates user as per business logic i.e. check duplicate emailId etc
 	// and then uses user repository to create user
 	CreateUser(ctx context.Context, user User) (User, error)
 	GetUserByEmailId(ctx context.Context, emailId string) (User, error)

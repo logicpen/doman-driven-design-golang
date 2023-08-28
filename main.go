@@ -5,7 +5,7 @@ import (
 	"ddd-golang/domain"
 	_userHandler "ddd-golang/user/delivery/http"
 	_userRepo "ddd-golang/user/repository/inmemory"
-	_userUseCase "ddd-golang/user/useCase"
+	_userUseCase "ddd-golang/user/usecase"
 	"log"
 	"net/http"
 	"os"
@@ -18,7 +18,7 @@ func main() {
 	address := "127.0.0.1:9090"
 
 	// initialize persistent storage
-	// we are using local map but it can be replaced with db connection
+	// we are using local map, but it can be replaced with db connection
 	mapStore := make(map[string]domain.User)
 
 	mux := http.NewServeMux()
